@@ -1,23 +1,37 @@
-import HeaderHero from './components/HeaderHero'
-import AuthCard from './components/AuthCard'
-import DashboardCards from './components/DashboardCards'
-import ChatPreview from './components/ChatPreview'
+import BWHero from './components/BWHero'
+import BWFeatures from './components/BWFeatures'
+import BWChatMock from './components/BWChatMock'
+import BWCTA from './components/BWCTA'
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#F9FAFB] text-slate-900">
-      <HeaderHero />
+    <div className="min-h-screen bg-white text-black">
+      <header className="border-b-2 border-black bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
+          <a href="#" className="font-extrabold text-xl tracking-tight">SewaFinance</a>
+          <nav className="hidden sm:flex items-center gap-6 text-sm">
+            <a href="#fitur" className="hover:underline">Fitur</a>
+            <a href="#chat-demo" className="hover:underline">Demo</a>
+            <a href="#cta" className="hover:underline">Mulai</a>
+          </nav>
+        </div>
+      </header>
+
       <main>
-        <AuthCard />
-        <DashboardCards />
-        <ChatPreview />
+        <BWHero />
+        <BWFeatures />
+        <BWChatMock />
+        <div id="cta">
+          <BWCTA />
+        </div>
       </main>
-      <footer className="border-t bg-white/80 backdrop-blur">
+
+      <footer className="border-t-2 border-black bg-white">
         <div className="mx-auto max-w-6xl px-4 py-6 text-sm flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-slate-500">© {new Date().getFullYear()} SewaFinance — AI-powered personal finance</p>
+          <p>© {new Date().getFullYear()} SewaFinance</p>
           <div className="flex items-center gap-4">
-            <a href="#auth" className="text-slate-600 hover:text-slate-900 transition">Masuk</a>
-            <a href="#chat" className="text-slate-600 hover:text-slate-900 transition">Demo Chat</a>
+            <a href="#fitur" className="underline">Fitur</a>
+            <a href="#chat-demo" className="underline">Demo</a>
           </div>
         </div>
       </footer>
